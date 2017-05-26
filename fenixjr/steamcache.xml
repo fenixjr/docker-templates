@@ -3,7 +3,7 @@
   <Beta>False</Beta>
   <Category>Backup: Tools:</Category>
   <Name>steamcache</Name>
-  <Description>This docker container provides a a depot-caching proxy server for Steam content. For any network with more than one PC gamer in connected this will drastically reduce internet bandwidth consumption.</Description>
+  <Description>This docker container provides a depot-caching proxy server for Steam content. For any network with more than one PC gamer in connected this will drastically reduce internet bandwidth consumption.</Description>
   <Overview/>
   <Project>https://steamcache.github.io/</Project>
   <Support/>
@@ -30,7 +30,7 @@
     </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:80]</WebUI>
-  <Icon>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/cheesemarathon/steamcache/steamcache.png</Icon>
+  <Icon>https://github.com/fenixjr/docker-templates/blob/master/fenixjr/steamcache.png</Icon>
   <Config Name="Web UI Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">80</Config>
   <Config Name="steam cache" Target="/data/cache" Default="" Mode="rw" Description="Container Path: /data/cache" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Steam/</Config>
 </Container>
