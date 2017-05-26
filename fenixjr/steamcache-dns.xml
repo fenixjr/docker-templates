@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Beta>False</Beta>
+  <Category>Backup: Tools:</Category>
+  <Name>steamcache-dns</Name>
+  <Description>This docker container provides the DNS services for steamcache.</Description>
+  <Overview/>
+  <Project>https://steamcache.github.io/</Project>
+  <Support/>
+  <Registry>https://hub.docker.com/r/steamcache/steamcache-dns/</Registry>
+  <GitHub>https://github.com/steamcache/steamcache</GitHub>
+  <Repository>steamcache/steamcache-dns</Repository>
+  <Network>host</Network>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment/>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/Steam/</HostDir>
+      <ContainerDir>/data/cache</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <Icon>https://raw.githubusercontent.com/fenixjr/docker-templates/master/fenixjr/steamcache.png</Icon>
+  <Config Name="Web UI Port" Target="53" Default="" Mode="udp" Description="Container Port: 53" Type="Port" Display="always" Required="false" Mask="false">80</Config>
+  <Config Name="steamcache dns" Target="/data/cache" Default="" Mode="rw" Description="Container Path: /data/cache" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Steam/</Config>
+</Container>
